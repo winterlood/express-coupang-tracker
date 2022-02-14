@@ -56,7 +56,8 @@ app.get("/cp/youtube.com/:productId/:optionId/file.png", (req, res) => {
   res.render("coupang", { productId, optionId });
 });
 
-app.listen("1234", () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
   console.log(`
   ################################################
   🛡️  Server listening on port: 1234🛡️
