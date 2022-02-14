@@ -56,23 +56,6 @@ app.get("/cp/youtube.com/:productId/:optionId/file.png", (req, res) => {
   res.render("coupang", { productId, optionId });
 });
 
-app.get(
-  "/file/:productId/:optionId/file.png",
-  (req: Request, res: Response) => {
-    // <img src='http://localhost:1234/file/6320457040/80547016275/file.png' />
-    const reqWithAgent = req as RequestWithAgent;
-    console.log(req.query);
-    res.sendFile(path.join(__dirname, "../public", "file.png"));
-  }
-);
-
-app.get("/file/:productId/file.png", (req: Request, res: Response) => {
-  // <img src='http://localhost:1234/file/6320457040/file.png' />
-  const reqWithAgent = req as RequestWithAgent;
-  console.log(req.query);
-  res.sendFile(path.join(__dirname, "../public", "file.png"));
-});
-
 app.listen("1234", () => {
   console.log(`
   ################################################
