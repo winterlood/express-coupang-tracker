@@ -29,5 +29,7 @@
   "bugs": {
     "url": "https://github.com/winterlood/express-coupang-tracker/issues"
   },
-  "homepage": "https://github.com/winterlood/express-coupang-tracker#readme"
+  "engines": {
+    "node": "16.x"
+  }
 }
